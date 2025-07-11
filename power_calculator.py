@@ -15,16 +15,17 @@ def power(num, expo):
     return int(res)
 
 if __name__ == "__main__":
-    try:
-        number = float(input("Enter number: "))
-    except ValueError:
-        print("Invalid number input.")
-        exit()
-    else:
+    while True:
         try:
-            expo = int(input("Enter exponent: "))
-            print(f"expo {expo}")
+            number = float(input("Enter number: "))
         except ValueError:
-            print("Invalid exponent input.")
-        finally:
-            print(f"Result: {power(number, expo)}")
+            print("Invalid number input.")
+            exit()
+        else:
+            try:
+                expo = int(input("Enter exponent: "))
+                print(f"expo {expo}")
+            except ValueError:
+                print("Invalid exponent input.")
+            finally:
+                print(f"Result: {power(number, expo)}")
